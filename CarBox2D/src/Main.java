@@ -40,7 +40,11 @@ public class Main extends PApplet {
 	}
 	
 	public void keyReleased(){
-		car.switchMotorOff();
+		if(key == CODED){
+			if(keyCode == LEFT || keyCode == RIGHT){
+				car.switchMotorOff();
+			}
+		}
 	}
 
 	public static void main(String args[]) {
